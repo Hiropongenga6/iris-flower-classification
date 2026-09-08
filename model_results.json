@@ -1,0 +1,17 @@
+{
+  "problem": "Iris Species Classification",
+  "dataset_info": {
+    "total_samples": 150,
+    "features": [
+      "sepal length (cm)",
+      "sepal width (cm)",
+      "petal length (cm)",
+      "petal width (cm)"
+    ],
+    "classes": [
+      "setosa",
+      "versicolor",
+      "virginica"
+    ],
+    "class_distribution": {
+      "setosa": 
