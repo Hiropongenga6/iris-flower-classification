@@ -1,56 +1,48 @@
-# Beginner Data Science Project
+# Iris Flower Classification: An Introduction to Machine Learning
 
-This simple project teaches a beginner how to work with a dataset, inspect it with pandas, and create easy visualizations using matplotlib.
+## Overview
 
-## What this project does
+I developed this project as an introduction to machine learning and Python-based data analysis. Using the Iris dataset, I explored how measurable features of iris flowers can be used to classify three species: *Iris setosa*, *Iris versicolor*, and *Iris virginica*.
 
-- Loads the Iris dataset from `scikit-learn`
-- Converts it into a `pandas` DataFrame
-- Shows the first rows and summary statistics
-- Groups data by species and calculates average feature values
-- Saves a CSV copy of the dataset
-- Creates a histogram and a scatter plot
+The project allowed me to practise the main stages of a basic supervised machine-learning workflow, including exploratory data analysis, data preprocessing, train/test splitting, model comparison, cross-validation, hyperparameter tuning, and model evaluation.
 
-## Run the project
+## Why I undertook this project
 
-From the workspace root:
+I am studying pharmaceutical science and am interested in eventually working in pharmaceutical R&D at the interface of experimental and computational science.
 
-```bash
-python iris_simple_analysis.py
-```
+My long-term goal is to develop the computational skills needed to analyse experimental data, identify promising molecules, and potentially use data-driven approaches to help guide experimental design.
 
-## SVM classification and hyperparameter tuning
+The Iris dataset is not directly related to pharmaceutical research. I chose it as an accessible starting point for understanding the principles behind supervised machine learning before progressing to more biologically and pharmaceutically relevant datasets.
 
-`iris_SVM_tuning.py` extends the basic analysis into a complete Iris flower
-classification workflow. It:
+## Machine-learning workflow
 
-- Loads and explores the Iris dataset
-- Saves the dataset as `iris_dataset.csv`
-- Creates histograms and feature scatter plots
-- Scales the features with `StandardScaler`
-- Splits the data into training and test sets
-- Compares Logistic Regression, Random Forest, SVM, and K-Nearest Neighbors
-- Evaluates each model with test accuracy and 5-fold cross-validation
-- Tunes an SVM with `GridSearchCV` across multiple `C`, `gamma`, and `kernel` values
-- Reports the tuned model's classification metrics and confusion matrix
-- Creates ROC curve, confusion matrix, and linear-SVM feature-importance plots when applicable
-- Saves the best model parameters and evaluation results as JSON
+The project compares several classification algorithms:
 
-Run it from the workspace root:
+- Logistic Regression
+- Random Forest
+- Support Vector Machine (SVM)
+- K-Nearest Neighbours (KNN)
 
-```bash
-python iris_SVM_tuning.py
-```
+I used cross-validation to examine model performance and hyperparameter tuning to investigate how model settings affect classification performance. Model performance was then assessed using a held-out test set and classification metrics.
 
-The script creates `svm_tuning_results.json` and saves generated charts in
-`svm_tuning_plots/`.
+## Use of generative AI
 
-## Files
+Generative AI was used to help scaffold the initial project structure and to provide guidance while I was learning unfamiliar Python and machine-learning concepts.
 
-- `iris_simple_analysis.py` — main script with comments for beginners
-- `iris_SVM_tuning.py` — compares classification models and tunes an SVM
-- `requirements.txt` — required packages
-- `iris_dataset.csv` — saved dataset output (created when the script runs)
-- `plots/` — generated charts saved by the script
-- `svm_tuning_results.json` — model comparison and tuned SVM results (created when the tuning script runs)
-- `svm_tuning_plots/` — charts created by the tuning script
+I reviewed and modified the code and used the project as a learning exercise to understand the purpose of each stage of the workflow. The repository therefore represents an AI-assisted learning project rather than work completed entirely without external assistance.
+
+## What I learned
+
+Through this project, I developed a foundational understanding of:
+
+- separating training and test data;
+- feature scaling and why it is important for some machine-learning algorithms;
+- comparing different classification algorithms;
+- cross-validation;
+- hyperparameter tuning;
+- confusion matrices and classification metrics; and
+- the importance of avoiding data leakage when evaluating machine-learning models.
+
+## Next steps
+
+My next goal is to apply these concepts to datasets that are more closely related to pharmaceutical science, such as molecular descriptors, biological assay data, or compound activity data.
